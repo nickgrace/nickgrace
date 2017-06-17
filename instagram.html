@@ -5,6 +5,39 @@
     <title>Instagram Test</title>
   </head>
   <body>
-    Hello world!
+
+    <h1>This is a test</h1>
+
+    https://api.instagram.com/oauth/authorize/?client_id=1a162434fb534717a33c99438e868aec&redirect_uri=http://nickgrace.github.io/nickgrace/instagram.html&response_type=code
+
+    <div class="feed">
+
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/spectragram.js"></script>
+
+<script type="text/javascript">
+var Spectra = {
+  instaToken: '28218341.1a16243.1d291c55bf314023bc300115946c6649',
+  instaID: ' 1a162434fb534717a33c99438e868aec',
+
+  init: function () {
+    $.fn.spectragram.accessData = {
+      accessToken: this.instaToken,
+      clientID: this.instaID
+    };
+
+    $('.feed').spectragram('getUserFeed',{
+      max: 12,
+      query: 'adrianengine',
+      wrapEachWith: '<div class="photo">'
+    });
+  }
+}
+
+Spectra.init();
+</script>
+
   </body>
 </html>
