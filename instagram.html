@@ -15,7 +15,7 @@
     </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script type="text/javascript" src="js/spectragram.js"></script>
+    <script type="text/javascript" src="js/spectragram.min.js"></script>
 
 <script type="text/javascript">
 var Spectra = {
@@ -28,7 +28,7 @@ var Spectra = {
       clientID: this.instaID
     };
 
-    $('.feed').spectragram('getUserFeed',{
+    jQuery('.feed').spectragram('getUserFeed',{
       max: 12,
       query: 'nickrgrace',
       wrapEachWith: '<div class="photo">'
